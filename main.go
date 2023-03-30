@@ -32,6 +32,9 @@ func main() {
 		fmt.Println("Exit")
 	case "exit":
 		fmt.Println("Exit")
+	default:
+		fmt.Println("Option not available")
+		fmt.Println("Exit")
 	}
 
 }
