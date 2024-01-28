@@ -17,12 +17,13 @@ func LowerCase() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		lowerCaseString := strings.ToLower(getString)
-		fmt.Println(lowerCaseString)
 
 		if strings.Trim(getString, "\r\n") == "0" || strings.Trim(getString, "\r\n") == "exit" {
 			fmt.Println("Exit")
 			break
 		}
+
+		lowerCaseString := strings.ToLower(getString)
+		fmt.Println(lowerCaseString)
 	}
 }

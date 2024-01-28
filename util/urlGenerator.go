@@ -8,11 +8,11 @@ import (
 	"strings"
 )
 
-func UpperCase() {
+func UrlGenerator() {
 	for {
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Println("Enter '0' or 'exit' to end the program")
-		fmt.Print("Enter the string that you want to upper case: ")
+		fmt.Print("Enter the string that you want to transform to url: ")
 		getString, err := reader.ReadString('\n')
 		if err != nil {
 			log.Fatal(err)
@@ -23,7 +23,8 @@ func UpperCase() {
 			break
 		}
 
-		upperCaseString := strings.ToUpper(getString)
-		fmt.Println(upperCaseString)
+		stringToUrl := strings.ReplaceAll(getString, " ", "-")
+		stringToUrl = strings.ToLower(stringToUrl)
+		fmt.Println(stringToUrl)
 	}
 }
